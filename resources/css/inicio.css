@@ -1,0 +1,278 @@
+/* CONFIGURACIÓN GENERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Instrument Sans', Arial, sans-serif;
+    color: #333;
+    background-color: #fff;
+    line-height: 1.6;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* ENCABEZADO */
+.encabezado {
+    background-color: #102a43;
+    padding: 18px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navegacion {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    color: white;
+    font-size: 23px;
+    font-weight: bold;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: #d4af37;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: #d4af37;
+}
+
+.btn-login {
+    background-color: #d4af37;
+    color: #102a43;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn-login:hover {
+    background-color: #f0cf65;
+}
+
+/* PRESENTACIÓN PRINCIPAL */
+.hero {
+    min-height: 550px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+
+    background:
+        linear-gradient(rgba(10, 30, 50, 0.75), rgba(10, 30, 50, 0.75)),
+        url('/assets/hotel.jpg') center/cover no-repeat;
+}
+
+.hero-contenido {
+    max-width: 750px;
+    padding: 30px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 19px;
+    margin-bottom: 30px;
+}
+
+.btn-principal {
+    display: inline-block;
+    background-color: #d4af37;
+    color: #102a43;
+    padding: 13px 28px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.btn-principal:hover {
+    background-color: #f0cf65;
+    transform: translateY(-3px);
+}
+
+/* SECCIONES */
+.seccion {
+    padding-top: 75px;
+    padding-bottom: 75px;
+}
+
+.titulo-seccion {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.titulo-seccion h2 {
+    color: #102a43;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.titulo-seccion p {
+    color: #777;
+}
+
+/* HABITACIONES */
+.habitaciones-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.tarjeta-habitacion {
+    background-color: white;
+    padding: 30px 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    border-bottom: 4px solid #d4af37;
+    transition: transform 0.3s;
+}
+
+.tarjeta-habitacion:hover {
+    transform: translateY(-8px);
+}
+
+.tarjeta-habitacion h3 {
+    color: #102a43;
+    font-size: 21px;
+    margin-bottom: 12px;
+}
+
+.tarjeta-habitacion p {
+    color: #777;
+    margin-bottom: 15px;
+}
+
+.tarjeta-habitacion span {
+    color: #b18b19;
+    font-weight: bold;
+}
+
+/* SERVICIOS */
+.servicios {
+    background-color: #f4f6f8;
+}
+
+.servicios-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.servicios-grid article {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.servicios-grid h3 {
+    color: #102a43;
+    margin-bottom: 12px;
+}
+
+.servicios-grid p {
+    color: #777;
+}
+
+/* CONTACTO */
+#contacto {
+    text-align: center;
+}
+
+#contacto .titulo-seccion {
+    margin-bottom: 25px;
+}
+
+/* PIE DE PÁGINA */
+.pie-pagina {
+    background-color: #102a43;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+/* DISEÑO RESPONSIVE */
+@media (max-width: 900px) {
+    .habitaciones-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .navegacion {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .navegacion {
+        flex-direction: column;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .habitaciones-grid,
+    .servicios-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.btn-reservar {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 25px;
+    background-color: #d4af37;
+    color: #102a43;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn-reservar:hover {
+    background-color: #b8952d;
+    color: white;
+}
